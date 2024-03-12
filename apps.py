@@ -6,7 +6,6 @@ from scipy.interpolate import UnivariateSpline
 import plotly.graph_objects as go
 from prophet import Prophet
 from datetime import timedelta
-! pip install plotly
 st.set_page_config(layout="wide", initial_sidebar_state="collapsed")
 
 # Increase the container width
