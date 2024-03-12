@@ -3,4 +3,5 @@ prophet
 numpy
 pandas
 streamlit
-scipy==1.7.3
+scipy
+scikit-learn 
