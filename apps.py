@@ -19,10 +19,7 @@ import streamlit as st
 import pandas as pd
 import time
 import seaborn as sns
-# Set page configuration
 
-
-# Increase the container width
 st.markdown(
     """
     <style>
@@ -40,7 +37,7 @@ st.markdown(
     <style>
         /* Define light theme */
         body {
-            background-color: #f0f2f6; /* Set background color to light gray */
+            background-color: #ffffff; /* Set background color to white */
             color: #000000; /* Set text color to black */
         }
         .stApp {
@@ -61,6 +58,7 @@ st.markdown("""
 st.markdown("""
 for details 👉🏻[description](https://predictionhsi.blogspot.com/2024/03/energy-prediction-requirements.html) 
 """)
+
 def main():
     # Add a file uploader widget
 
