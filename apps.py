@@ -618,22 +618,7 @@ The plot provides insights into how different components contribute to the overa
 
             # Assuming merged_df['ds'] contains datetime objects
 
-            # Extract date and time separately
-            fig = go.Figure()
 
-            # Add traces for the trend component of each data frame
-            fig.add_trace(go.Scatter(x=past_forecast['ds'], y=past_forecast['trend'], mode='lines', name='Past Forecast Trend', line=dict(color='blue')))
-            fig.add_trace(go.Scatter(x=future_forecast['ds'], y=future_forecast['trend'], mode='lines', name='Forecast Trend', line=dict(color='green')))
-            fig.add_trace(go.Scatter(x=df_hour['ds'], y=model.predict(df_hour)['trend'], mode='lines', name='Original Data Trend', line=dict(color='red')))
-
-            # Set layout
-            fig.update_layout(title='Trend Component of Past, Forecast, and Original Data',
-                            xaxis_title='Date',
-                            yaxis_title='Trend',
-                            legend=dict(yanchor="top", y=0.99, xanchor="left", x=0.01))
-
-            # Show the plot
-            st.plotly_chart(fig)
             # Extract date and time separately
             merged_df['date'] = merged_df['ds'].dt.strftime('%Y-%m-%d')
             merged_df['time'] = merged_df['ds'].dt.strftime('%H:%M:%S')
@@ -950,21 +935,7 @@ The plot provides insights into how different components contribute to the overa
 """)
 
             # Assuming merged_df['ds'] contains datetime objects
-            fig = go.Figure()
 
-            # Add traces for the trend component of each data frame
-            fig.add_trace(go.Scatter(x=past_forecast['ds'], y=past_forecast['trend'], mode='lines', name='Past Forecast Trend', line=dict(color='blue')))
-            fig.add_trace(go.Scatter(x=future_forecast['ds'], y=future_forecast['trend'], mode='lines', name='Forecast Trend', line=dict(color='green')))
-            fig.add_trace(go.Scatter(x=df_hour['ds'], y=model.predict(df_hour)['trend'], mode='lines', name='Original Data Trend', line=dict(color='red')))
-
-            # Set layout
-            fig.update_layout(title='Trend Component of Past, Forecast, and Original Data',
-                            xaxis_title='Date',
-                            yaxis_title='Trend',
-                            legend=dict(yanchor="top", y=0.99, xanchor="left", x=0.01))
-
-            # Show the plot
-            st.plotly_chart(fig)
             # Extract date and time separately
 
             # Extract date and time separately
