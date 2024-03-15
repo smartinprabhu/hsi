@@ -87,7 +87,7 @@ def main():
 
 
 # Configure icons for each button horizontally
-        col1, col2, col3, col4 = st.columns(4)
+        col1, col2, col3= st.columns(3)
 
         if col1.button("1️⃣ EDA REPORT "):
             st.session_state.show_data_preparation_button = True
@@ -102,11 +102,7 @@ def main():
         if st.session_state.get("show_got_button", False):
             if col3.button("3️⃣ MODELING"):
                 st.session_state.page = "got"
-                st.session_state.show_export_button = True
 
-        if st.session_state.get("show_export_button", False):
-            if col4.button("4️⃣"):
-                st.session_state.page = "export"
 
         # Retrieve the page parameter
         page = st.session_state.get("page", "main")
@@ -124,10 +120,7 @@ def main():
                 with st.spinner("Processing..."):
                     time.sleep(2)
                     got(df)
-        elif page == "export":
-            if 'df' in locals():
-                with st.spinner("Processing..."):
-                    time.sleep(2)
+
 
 
 def display_eda_report(df):
@@ -524,7 +517,7 @@ The plot provides insights into how different components contribute to the overa
             st.subheader("Forecasting for Historical(past) Time periods")
             
             st.markdown(""" 
- - This consists of the   data points  which are forecasted for teh historical(past) timeperiods.
+ - This consists of the   data points  which are forecasted for the historical(past) timeperiods.
  - The forecasted data   has the parameters : `ds` ,`trend`, `yhat_lower` ,`yhat_upper`,
 `trend_lower`,`trend_upper`, .`additive_terms` , `additive_terms_lower` ,`additive_terms_upper` ,`daily`  ,`daily_lower` ,`daily_upper` .`weekly`,`weekly_lower` ,`weekly_upper`,`multiplicative_terms`,`multiplicative_terms_lower`,`multiplicative_terms_upper`,`yhat`
 """)
@@ -580,7 +573,7 @@ The plot provides insights into how different components contribute to the overa
             # Display the plot
             st.pyplot(fig_past_comp, clear_figure=True)
 
-            st.subheader("Distribution of teh Actual and Forecasted Values ")
+            st.subheader("Distribution of the Actual and Forecasted Values ")
             st.markdown("""
             - **Forecast**:  These values are predictions made by the forecasting model for future energy consumption.
             - **Past Forecast**: . These values are predictions made by the forecasting model for past energy consumption.
@@ -902,7 +895,7 @@ The plot provides insights into how different components contribute to the overa
 
             # Display the plot
             st.pyplot(fig_past_comp, clear_figure=True)
-            st.subheader("Distribution of teh Actual and Forecasted Values ")
+            st.subheader("Distribution of the Actual and Forecasted Values ")
             st.markdown("""
             - **Forecast**:  These values are predictions made by the forecasting model for future energy consumption.
             - **Past Forecast**: . These values are predictions made by the forecasting model for past energy consumption.
