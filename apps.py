@@ -33,11 +33,34 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
+
+# Apply custom CSS to set the theme to light
+st.markdown(
+    """
+    <style>
+        /* Define light theme */
+        body {
+            background-color: #f0f2f6; /* Set background color to light gray */
+            color: #000000; /* Set text color to black */
+        }
+        .stApp {
+            color: #000000; /* Set text color to black */
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Add your markdown content
 st.markdown("""
 <div style="background-color: #f9f9f9; border-radius: 10px; padding: 20px; text-align: center; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-    <h3 style="color: #333; font-family: 'Times New Roman', sans-serif; font-size: 24px; margin-bottom: 15px; text-transform: uppercase; font-weight: bold;">Enhancing Energy Management Through Time Series Forecasting</h3></div>
+    <h3 style="color: #333; font-family: 'Times New Roman', sans-serif; font-size: 24px; margin-bottom: 15px; text-transform: uppercase; font-weight: bold;">Enhancing Energy Management Through Time Series Forecasting</h3>
+</div>
 """, unsafe_allow_html=True)
 
+st.markdown("""
+for details 👉🏻[description](https://predictionhsi.blogspot.com/2024/03/energy-prediction-requirements.html) 
+""")
 def main():
     # Add a file uploader widget
 
