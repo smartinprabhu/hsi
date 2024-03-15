@@ -10,6 +10,5 @@ matplotlib
 datetime
 reportlab
 transformers
-time
-random
+
 seaborn
